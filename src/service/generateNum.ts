@@ -1,7 +1,7 @@
 import {addNumbers} from "../store/rootReducer";
 
 const generatePrimeArray = (amountOfNum: number) => {
-    let res: any = [];
+    let res: number[] = [];
 
     const isPrime = (num: number) => {
         for (let i = 2, s = Math.sqrt(num); i <= s; i++)
@@ -13,8 +13,8 @@ const generatePrimeArray = (amountOfNum: number) => {
         if (isPrime(j)) {
             res.push(j);
         }
-
     }
+
     res.push(...res.slice(0))
     return (addNumbers(res.sort(() => Math.random() - 0.5)))
 }

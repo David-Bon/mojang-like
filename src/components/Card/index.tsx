@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 
 import {useAppDispatch, useAppSelector} from "../../service/hooks";
-import styles from './Card.module.scss'
+import styles from './Card.module.css'
 import classNames from "classnames";
 import generatePrimeArray from "../../service/generateNum";
 import {toggleActive} from "../../store/rootReducer";
@@ -10,7 +10,6 @@ export default function Card() {
     const dispatch = useAppDispatch();
     const numbersList = useAppSelector(state => state.mojang.list)
     const selectedItems = useAppSelector(state => state.mojang.selected)
-    console.log(numbersList, selectedItems)
 
     return (
         <div className={styles.root}>
