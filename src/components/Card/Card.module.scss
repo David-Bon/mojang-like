@@ -1,0 +1,36 @@
+.root {
+  display: grid;
+  justify-content: center;
+  grid-gap: 10px;
+  grid-template-columns : repeat(10, 95px);
+  height: 100%;
+
+}
+
+.cardItem {
+  border-radius: 15%;
+  background: #1e66af;
+  height: 135px;
+  width: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cardValue {
+  visibility: hidden;
+  font-size: 26px;
+}
+
+.active {
+  visibility: visible;
+}
+
+.completed {
+  visibility: visible;
+  background: forestgreen;
+}
+
+.btn {
+grid-column: 5;
+}
